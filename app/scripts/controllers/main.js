@@ -43,20 +43,27 @@ angular.module('protifyApp')
         $scope.nowPlaying = 0;
 
         $scope.play = function() {
-            console.log("http://lallinuo.users.cs.helsinki.fi/"+$scope.tracks[$scope.nowPlaying].path);
             Audio.play("http://lallinuo.users.cs.helsinki.fi/"+$scope.tracks[$scope.nowPlaying].path);
         }
 
-        $scope.pause = function() {
-            console.log("pause");
+        $scope.stop = function() {
+            Audio.stop();
         }
 
         $scope.previous = function() {
-            console.log("previous");
+            $scope.nowPlaying--;
+            if ($scope.nowPlaying < 0){
+                $scope.nowPlaying = $scope.tracks.length -1;
+            }
+            $scope.play()
         }
 
         $scope.next = function() {
-            console.log("next");
+            $scope.nowPlaying++;
+            if ($scope.nowPlaying >= $scope.tracks.length){
+                $scope.nowPlaying = 0;
+            }
+            $scope.play()
         }
     };
 
@@ -77,7 +84,10 @@ angular.module('protifyApp')
     play: function(filename) {
         audioElement.src = filename;
         audioElement.play();
-    }
+    },
 
+    stop: function() {
+        audioElement.stop();
+    }
   }
 });
