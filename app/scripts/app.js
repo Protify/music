@@ -1,6 +1,8 @@
 'use strict';
 
-angular
-  .module('protifyApp', [
-    'ngResource'
-  ]);
+var app = angular.module('protifyApp', ['ngResource']);
+
+app.config(function($httpProvider) {
+    $httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+});

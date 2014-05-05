@@ -1,36 +1,46 @@
-<div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
-  </ul>
-  <h3 class="text-muted">protify</h3>
-</div>
+<main>
+<header class="row">
+  <h1 class="col-sm-4">Protify</h1>
 
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
+  <player />
+</header>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+<form class="search">
+  <input placeholder="Search" type="search" ng-model="search"></input>
+</form>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+<table class="playlist">
+  <thead>
+    <th>Title</th>
+    <th>Artist</th>
+    <th>Album</th>
+    <th>Length</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="track in tracks | filter:search" >
+      <td class="title" ng-click="clickTitle(track.tags.title)">
+        {{track.tags.title}}
+      </td>
+      <td class="artist" ng-click="clickArtist(track.tags.artist)">
+        {{track.tags.artist}}
+      </td>
+      <td class="album" ng-click="clickAlbum(track.tags.album)">
+        {{track.tags.album}}
+      </td>
+      <td class="length" ng-click="clickLength(track.tags.time)">
+        {{track.tags.time}}
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <th>Title</th>
+    <th>Artist</th>
+    <th>Album</th>
+    <th>Length</th>
+  </tfoot>
+</table>
+</main>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
-
-<div class="footer">
-  <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-</div>
+<footer class="footer">
+  <p><span class="glyphicon glyphicon-heart"></span> from the Protify team</p>
+</footer>

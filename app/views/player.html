@@ -1,0 +1,20 @@
+<div class="player col-sm-5">
+  <div class="nowPlaying">
+    <span class="artist" ng-click="clickArtist(tracks[nowPlaying].artist)">
+      {{tracks[nowPlaying].tags.artist}}
+    </span>
+    <span class="album" ng-click="clickAlbum(tracks[nowPlaying].album)">
+      {{tracks[nowPlaying].tags.album}}
+    </span>
+    <span class="title" ng-click="clickTitle(tracks[nowPlaying].title)">
+      {{tracks[nowPlaying].tags.title}}
+    </span>
+  </div>
+
+  <div class="controls">
+    <a ng-click="previous()"><span class="glyphicon glyphicon-step-backward"></span></a>
+    <a ng-click="play()"><span class="glyphicon glyphicon-play"></span></a>
+    <a ng-click="pause()"><span class="glyphicon glyphicon-pause"></span></a>
+    <a ng-click="next()"><span class="glyphicon glyphicon-step-forward"></span></a>
+  </div>
+</div>
