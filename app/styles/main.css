@@ -2,14 +2,21 @@
 
 
 body {
-  background-color: #2e2e2e;
+  background-color: #3e3e3e;
   color: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-html, body, .main{
-  height: 100%;
+html, body, .main, .container{
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container{
+  background-color: #2e2e2e;
 }
 
 .header,
@@ -27,22 +34,33 @@ header h1{
   font-size: 4em;
   color: #8be54e;
   border-bottom: 3px double #8be54e;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  max-width: 500px;
 }
 
 .footer {
   margin-top: 40px;
   padding-top: 19px;
   border-top: 1px solid #8be54e;
+  background-color: #3e3e3e;
+}
+
+.footer p{
+  margin-bottom: 0;
 }
 
 .player{
-  float: right;
   background-color: #3e3e3e;
-  border: 1px solid #e5e5e5;
-  border-radius: 15px;
+  border: 1px solid #8be54e;
+  border-left: 0;
+  border-right: 0;
   margin-bottom: 20px;
   padding: 15px;
-  max-width: 200px;
+  width: 100%;
+  text-align: center;
 }
 
 .nowplaying{
