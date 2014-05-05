@@ -18,16 +18,16 @@
   </thead>
   <tbody>
     <tr ng-repeat="track in tracks | filter:search" >
-      <td class="title" ng-click="clickTitle(track.tags.title)">
+      <td class="title" ng-click="clickTitle(track.title)">
         {{track.tags.title}}
       </td>
-      <td class="artist" ng-click="clickArtist(track.tags.artist)">
+      <td class="artist" ng-click="clickArtist(track.artist)">
         {{track.tags.artist}}
       </td>
-      <td class="album" ng-click="clickAlbum(track.tags.album)">
+      <td class="album" ng-click="clickAlbum(track.album)">
         {{track.tags.album}}
       </td>
-      <td class="length" ng-click="clickLength(track.tags.time)">
+      <td class="length" ng-click="clickLength(track.time)">
         {{track.tags.time}}
       </td>
     </tr>
