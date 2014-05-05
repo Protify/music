@@ -18,7 +18,7 @@
   </thead>
   <tbody>
     <tr ng-repeat="track in tracks | filter:search" >
-      <td class="title" ng-click="clickTitle(track.title)">
+      <td class="title" ng-click="clickTitle(track.tags.title)">
         {{track.tags.title}}
       </td>
       <td class="artist" ng-click="clickArtist(track.artist)">
