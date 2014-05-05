@@ -1,5 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Marcellus+SC|Limelight);
-
+@import url(http://fonts.googleapis.com/css?family=Knewave);
 
 body {
   background-color: #3e3e3e;
@@ -30,10 +29,9 @@ html, body, .main, .container{
 }
 
 header h1{
-  font-family: 'Marcellus SC', serif;
+  font-family: 'Knewave', cursive;
   font-size: 4em;
   color: #8be54e;
-  border-bottom: 3px double #8be54e;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -46,6 +44,7 @@ header h1{
   padding-top: 19px;
   border-top: 1px solid #8be54e;
   background-color: #3e3e3e;
+  text-align: center;
 }
 
 .footer p{
@@ -110,8 +109,6 @@ header h1{
   color: #fff;
   outline: none;
 }
-
-
 
 .playlist{
   width: 80%;
