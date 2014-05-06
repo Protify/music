@@ -1,6 +1,6 @@
 <main>
 <header>
-  <player />
+  <player></player>
 
   <h1>Protify</h1>
   <h2>Music As A Service</h2>
@@ -20,11 +20,11 @@
     <th>Length</th>
   </thead>
   <tbody>
-    <tr ng-class="{playing: nowPlaying == $index}" ng-repeat="track in tracks | filter:search" >
+    <tr ng-class="{playing: nowPlaying == track}" ng-repeat="track in tracks | filter:search" ng-dblclick="setTrack(track)" >
       <td>
-        <span ng-show="nowPlaying == $index" class="glyphicon glyphicon-play"></span>
+        <span ng-show="nowPlaying == track" class="glyphicon glyphicon-play"></span>
       </td>
-      <td class="title" ng-click="clickTitle(track.title)">
+      <td class="title">
         {{track.title}}
       </td>
       <td class="artist" ng-click="clickArtist(track.artist)">
@@ -33,7 +33,7 @@
       <td class="album" ng-click="clickAlbum(track.album)">
         {{track.album}}
       </td>
-      <td class="length" ng-click="clickLength(track.length)">
+      <td class="length">
         {{track.length}}
       </td>
     </tr>

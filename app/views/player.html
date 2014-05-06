@@ -1,19 +1,19 @@
 <div class="player">
   <div class="nowPlaying">
-    <span class="artist" ng-click="clickArtist(tracks[nowPlaying].artist)">
-      {{tracks[nowPlaying].artist}}
+    <span class="artist" ng-click="clickArtist(nowPlaying.artist)">
+      {{nowPlaying.artist}}
     </span>
-    <span class="album" ng-click="clickAlbum(tracks[nowPlaying].album)">
-      {{tracks[nowPlaying].album | ifEmpty:'Unknown'}}
+    <span class="album" ng-click="clickAlbum(nowPlaying.album)">
+      {{nowPlaying.album | ifEmpty:'Unknown'}}
     </span>
-    <span class="title" ng-click="clickTitle(tracks[nowPlaying].title)">
-      {{tracks[nowPlaying].title}}
+    <span class="title" ng-click="clickTitle(nowPlaying.title)">
+      {{nowPlaying.title}}
     </span>
   </div>
 
   <div class="controls">
     <a ng-click="previous()"><span class="glyphicon glyphicon-step-backward"></span></a>
-    <a ng-click="play()"><span class="glyphicon glyphicon-play"></span></a>
+    <a ng-click="togglePlayback()"><span ng-class="'glyphicon-'+playing" class="glyphicon"></span></a>
     <a ng-click="stop()"><span class="glyphicon glyphicon-stop"></span></a>
     <a ng-click="next()"><span class="glyphicon glyphicon-step-forward"></span></a>
   </div>
