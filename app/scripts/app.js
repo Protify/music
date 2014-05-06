@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('protifyApp', ['ngResource']);
+var app = angular.module('protifyApp', ['ngResource', 'ui.router']);
 
 app.config(function($httpProvider) {
     $httpProvider.defaults.useXDomain = true;

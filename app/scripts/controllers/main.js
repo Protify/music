@@ -2,11 +2,14 @@
 
 var app = angular.module('protifyApp');
 
-app.controller('MainCtrl', function ($scope, Track, Audio) {
+app.controller('MainCtrl', function ($scope, Track, Audio, $stateParams) {
+  
   $scope.setTrack = function(track){
     $scope.nowPlaying = track;
     Audio.playFile(track.file);
   };
+
+  $scope.id = $stateParams;
 
   $scope.clickArtist = function(artist) {
     console.log('Clicked artist '+artist);
@@ -34,3 +37,4 @@ app.controller('MainCtrl', function ($scope, Track, Audio) {
       Audio.pause();
     });
 });
+

@@ -4,6 +4,10 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
+    <base href="http://127.0.0.1:9000">
+    <!--
+    <base href="http://loezi.fi/protify">
+    -->
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
@@ -25,7 +29,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
+    <div class="container" ui-view ng-controller="MainCtrl"></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <!-- 
@@ -51,11 +55,13 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/router.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/directives/player.js"></script>
         <script src="scripts/factories/audio.js"></script>
