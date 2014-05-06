@@ -1,13 +1,13 @@
 <div class="player">
   <div class="nowPlaying">
     <span class="artist" ng-click="clickArtist(tracks[nowPlaying].artist)">
-      {{tracks[nowPlaying].tags.artist}}
+      {{tracks[nowPlaying].artist}}
     </span>
     <span class="album" ng-click="clickAlbum(tracks[nowPlaying].album)">
-      {{tracks[nowPlaying].tags.album}}
+      {{tracks[nowPlaying].album | ifEmpty:'Unknown'}}
     </span>
     <span class="title" ng-click="clickTitle(tracks[nowPlaying].title)">
-      {{tracks[nowPlaying].tags.title}}
+      {{tracks[nowPlaying].title}}
     </span>
   </div>
 

@@ -1,93 +1,97 @@
 'use strict';
 
-angular.module('protifyApp')
-	.factory('Track', function($http){
-		var url = "http://lallinuo.users.cs.helsinki.fi/protify/tracks";
-		var trackService = {};
+var app = angular.module('protifyApp');
 
-		trackService.all = function(){
-			return $http.get(url);
-		}
+app.factory('Track', function($http){
+  var url = 'http://lallinuo.users.cs.helsinki.fi/protify/tracks';
+  var trackService = {};
 
-		return trackService;
+  trackService.all = function(){
+    return $http.get(url);
+  };
+
+  return trackService;
 });
 
-angular.module('protifyApp')
-  .controller('MainCtrl', function ($scope, Track) {
+app.controller('MainCtrl', function ($scope, Track) {
+  $scope.nowPlaying = 0;
 
-    $scope.clickTitle = function(title) {
-        console.log("Clicked title "+title);
-    }
+  $scope.clickTitle = function(title) {
+    console.log('Clicked title '+title);
+  };
 
-    $scope.clickArtist = function(artist) {
-        console.log("Clicked artist "+artist);
-    }
+  $scope.clickArtist = function(artist) {
+    console.log('Clicked artist '+artist);
+  };
 
-    $scope.clickAlbum = function(album) {
-        console.log("Clicked album "+album);
-    }
+  $scope.clickAlbum = function(album) {
+    console.log('Clicked album '+album);
+  };
 
-    $scope.clickLength = function(length) {
-        console.log("Clicked length "+length);
-    }
+  $scope.clickLength = function(length) {
+    console.log('Clicked length '+length);
+  };
 
-    Track.all().success( function(data, status, headers, config) {
-        $scope.tracks = data;
-    }); 
-  });
+  $scope.tracks = [{
+    title: 'The server is fucked',
+    artist: 'Protify team',
+    album: 'Error Blues',
+    length: 'unknown',
+    file: 'http://upload.wikimedia.org/wikipedia/en/d/d0/Rick_Astley_-_Never_Gonna_Give_You_Up.ogg'
+  }];
 
-angular.module('protifyApp')
-  .directive('player', function (){
+  Track.all()
+    .success( function(data) {
+      $scope.tracks = data;
+    });
+});
 
-    function PlayerCtrl($scope, Audio) {
+app.directive('player', function (){
+
+  function PlayerCtrl($scope, Audio) {
+    $scope.play = function() {
+      Audio.play($scope.tracks[$scope.nowPlaying].file);
+    };
+
+    $scope.stop = function() {
+      Audio.stop();
+    };
+
+    $scope.previous = function() {
+      if (--$scope.nowPlaying < 0) {
+        $scope.nowPlaying = $scope.tracks.length - 1;
+      }
+      $scope.play();
+    };
+
+    $scope.next = function() {
+      if (++$scope.nowPlaying >= $scope.tracks.length) {
         $scope.nowPlaying = 0;
-
-        $scope.play = function() {
-            Audio.play("http://lallinuo.users.cs.helsinki.fi/"+$scope.tracks[$scope.nowPlaying].path);
-        }
-
-        $scope.stop = function() {
-            Audio.stop();
-        }
-
-        $scope.previous = function() {
-            $scope.nowPlaying--;
-            if ($scope.nowPlaying < 0){
-                $scope.nowPlaying = $scope.tracks.length -1;
-            }
-            $scope.play()
-        }
-
-        $scope.next = function() {
-            $scope.nowPlaying++;
-            if ($scope.nowPlaying >= $scope.tracks.length){
-                $scope.nowPlaying = 0;
-            }
-            $scope.play()
-        }
+      }
+      $scope.play();
     };
+  }
 
-    return {
-        restrict: 'E',
-        controller: PlayerCtrl,
-        templateUrl: 'views/player.html',
-        replace: true
-    };
+  return {
+    restrict: 'E',
+    controller: ['$scope', 'Audio', PlayerCtrl],
+    templateUrl: 'views/player.html',
+    replace: true
+  };
 });
 
-angular.module('protifyApp')
-.factory('Audio',function ($document) {
+app.factory('Audio',function ($document) {
   var audioElement = $document[0].createElement('audio');
   return {
     audioElement: audioElement,
 
     play: function(filename) {
-        audioElement.src = filename;
-        audioElement.play();
+      audioElement.src = filename;
+      audioElement.play();
     },
 
     stop: function() {
-        audioElement.stop();
+      audioElement.pause();
     }
-  }
+  };
 });

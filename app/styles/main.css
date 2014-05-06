@@ -1,37 +1,39 @@
-@import url(http://fonts.googleapis.com/css?family=Knewave);
+@import url(http://fonts.googleapis.com/css?family=Knewave|Source+Sans+Pro:200,400,700);
+
+*, *:after, *:before {
+    -webkit-font-smoothing:antialiased;
+    -moz-font-smoothing:antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -o-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+}
 
 body {
   background-color: #3e3e3e;
   color: #fff;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
-html, body, .main, .container{
+html, body, main, .container{
   width: 100%;
   margin: 0;
   padding-left: 0;
   padding-right: 0;
+  font-weight: 200;
+  font-size: 11pt;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .container{
   background-color: #2e2e2e;
 }
 
-.header,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+main header {
+  margin-top: 20px;
 }
 
-.header {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-header h1{
-  font-family: 'Knewave', cursive;
-  font-size: 4em;
-  color: #8be54e;
+main header h1,
+main header h2,
+main header h3{
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -39,10 +41,28 @@ header h1{
   max-width: 500px;
 }
 
+main header h1{
+  font-family: 'Knewave', cursive;
+  font-size: 4em;
+  color: #4EBBE5;
+}
+
+main header h2{
+  margin-bottom: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+main header h3{
+  margin-top: 0;
+  font-weight: 200;
+  font-size: 1em;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 .footer {
   margin-top: 40px;
   padding-top: 19px;
-  border-top: 1px solid #8be54e;
+  border-top: 1px solid #4EBBE5;
   background-color: #3e3e3e;
   text-align: center;
 }
@@ -53,7 +73,7 @@ header h1{
 
 .player{
   background-color: #3e3e3e;
-  border: 1px solid #8be54e;
+  border: 1px solid #4EBBE5;
   border-left: 0;
   border-right: 0;
   margin-bottom: 20px;
@@ -74,12 +94,16 @@ header h1{
   overflow: hidden;
 }
 
+.player .artist{
+  font-size: 1.1em;
+}
+
 .player .album{
   font-size: 0.8em;
 }
 
 .player .title{
-  font-weight: bold;
+  font-size: 1.4em;
 }
 
 .controls{
@@ -89,7 +113,10 @@ header h1{
 .controls a{
   border: 0;
   background: 0;
-  color: #8be54e;
+  color: #4EBBE5;
+  font-size: 1.3em;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 .search{
@@ -103,7 +130,7 @@ header h1{
 .search input:focus{
   width: 100%;
   background-color: #3e3e3e;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #4EBBE5;
   border-radius: 4px;
   padding: 4px;
   color: #fff;
@@ -116,8 +143,19 @@ header h1{
   margin-right: auto;
 }
 
+.playlist .playing td{
+  color: #4EBBE5;
+}
+
+.playlist .glyphicon-play {
+  font-size: 0.4em;
+  display: block;
+  height: 100%;
+  vertical-align: middle;
+}
+
 .playlist thead{
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #4EBBE5;
 }
 
 .playlist td{
@@ -133,7 +171,7 @@ header h1{
 }
 
 .playlist tfoot{
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #4EBBE5;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -157,8 +195,4 @@ header h1{
     border-radius: 0;
     text-align: center;
   }
-
-
 }
-
-
