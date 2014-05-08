@@ -2,14 +2,16 @@
 
 var app = angular.module('protifyApp', ['ngResource', 'ui.router']);
 
-app.config(function($httpProvider) {
-    $httpProvider.defaults.useXDomain = true;
-    delete $httpProvider.defaults.headers.common['X-Requested-With'];
-  });
+app.config(function ($httpProvider) {
+  $httpProvider.defaults.useXDomain = true;
+  delete $httpProvider.defaults.headers.common['X-Requested-With'];
+});
 
-app.filter('ifEmpty', function() {
-    return function(input, replaceText) {
-        if(input) return input;
-        return replaceText;
+app.filter('ifEmpty', function () {
+  return function (input, replaceText) {
+    if (input) {
+      return input;
     }
+    return replaceText;
+  };
 });

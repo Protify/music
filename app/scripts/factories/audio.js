@@ -2,14 +2,19 @@
 
 var app = angular.module('protifyApp');
 
-app.factory('Audio',function ($document) {
+app.factory('Audio', function ($document) {
   var audioElement = $document[0].createElement('audio');
   return {
     audioElement: audioElement,
     paused: audioElement.paused,
+    playing: !audioElement.paused,
 
     setSource: function (filename) {
       audioElement.src = filename;
+    },
+
+    end: function (callback) {
+      audioElement.addEventListener('ended', callback);
     },
 
     play: function () {

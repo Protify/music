@@ -4,19 +4,19 @@ var app = angular.module('protifyApp');
 
 app.controller('MainCtrl', function ($scope, Track, Audio, $stateParams) {
   
-  $scope.setTrack = function(track){
+  $scope.setTrack = function (track) {
     $scope.nowPlaying = track;
     Audio.playFile(track.file);
   };
 
   $scope.id = $stateParams;
 
-  $scope.clickArtist = function(artist) {
-    console.log('Clicked artist '+artist);
+  $scope.clickArtist = function (artist) {
+    console.log('Clicked artist ' + artist);
   };
 
-  $scope.clickAlbum = function(album) {
-    console.log('Clicked album '+album);
+  $scope.clickAlbum = function (album) {
+    console.log('Clicked album ' + album);
   };
 
   $scope.tracks = [{
@@ -30,11 +30,9 @@ app.controller('MainCtrl', function ($scope, Track, Audio, $stateParams) {
   $scope.nowPlaying = $scope.tracks[0];
 
   Track.all()
-    .success( function(data) {
+    .success(function (data) {
       $scope.tracks = data;
       $scope.nowPlaying = $scope.tracks[0];
-      Audio.playFile($scope.nowPlaying.file);
-      Audio.pause();
     });
 });
 
