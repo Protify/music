@@ -1,11 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Knewave|Source+Sans+Pro:200,400,700);
 
-*, *:after, *:before {
-    -webkit-font-smoothing:antialiased;
-    -moz-font-smoothing:antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -o-font-smoothing:antialiased;
-    font-smoothing:antialiased;
+*,
+*:after,
+*:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
 body {
@@ -13,7 +15,10 @@ body {
   color: #fff;
 }
 
-html, body, main, .container{
+html,
+body,
+main,
+.container {
   width: 100%;
   margin: 0;
   padding-left: 0;
@@ -23,7 +28,7 @@ html, body, main, .container{
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.container{
+.container {
   background-color: #2e2e2e;
 }
 
@@ -33,7 +38,7 @@ main header {
 
 main header h1,
 main header h2,
-main header h3{
+main header h3 {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -41,18 +46,21 @@ main header h3{
   max-width: 500px;
 }
 
-main header h1{
+main header h1 {
   font-family: 'Knewave', cursive;
   font-size: 4em;
   color: #4EBBE5;
+  margin: 0 auto;
+  font-weight: 200;
 }
 
-main header h2{
-  margin-bottom: 0;
+main header h2 {
+  margin: 0 auto;
+  font-size: 1.3em;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-main header h3{
+main header h3 {
   margin-top: 0;
   font-weight: 200;
   font-size: 1em;
@@ -67,11 +75,11 @@ main header h3{
   text-align: center;
 }
 
-.footer p{
+.footer p {
   margin-bottom: 0;
 }
 
-.player{
+.player {
   background-color: #3e3e3e;
   border: 1px solid #4EBBE5;
   border-left: 0;
@@ -82,44 +90,44 @@ main header h3{
   text-align: center;
 }
 
-.nowplaying{
+.nowplaying {
   border-bottom: 1px solid #e5e5e5;
 }
 
 .player .album,
 .player .title,
-.player .album{
+.player .album {
   display: block;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-.player .artist{
+.player .artist {
   font-size: 1.1em;
 }
 
-.player .album{
+.player .album {
   font-size: 0.8em;
 }
 
-.player .title{
+.player .title {
   font-size: 1.4em;
 }
 
-.controls{
+.controls {
   text-align: center;
 }
 
-.controls a{
+.controls a {
   border: 0;
   background: 0;
   color: #4EBBE5;
-  font-size: 1.3em;
+  font-size: 16px;
   margin-left: 4px;
   margin-right: 4px;
 }
 
-.search{
+.search {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -127,7 +135,7 @@ main header h3{
 }
 
 .search input,
-.search input:focus{
+.search input:focus {
   width: 100%;
   background-color: #3e3e3e;
   border: 1px solid #4EBBE5;
@@ -137,62 +145,84 @@ main header h3{
   outline: none;
 }
 
-.playlist{
+.playlist {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.playlist .playing td{
+.playlist .playing td {
   color: #4EBBE5;
 }
 
-.playlist .glyphicon-play {
+.playlist .fa-play {
   font-size: 0.4em;
   display: block;
   height: 100%;
   vertical-align: middle;
 }
 
-.playlist thead{
+.playlist thead {
   border-bottom: 1px solid #4EBBE5;
 }
 
-.playlist td{
+/* Prevent selection when doubleclicking to change track */
+.playlist th,
+.playlist td {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+
+.player th {
+  font-weight: 400;
+}
+
+.playlist td {
   padding-left: 5px;
 }
 
-.playlist td.length{
+.playlist td.length {
   width: 75px;
 }
 
-.playlist tr:nth-child(even){
+.playlist tr:nth-child(even) {
   background-color: #3e3e3e;
 }
 
-.playlist tfoot{
+.playlist tfoot {
   border-top: 1px solid #4EBBE5;
 }
 
 /* Responsive: Portrait tablets and up */
+
 @media screen and (max-width: 400px) {
-  
+  .container {
+    width: 100%;
+  }
+
   .header,
   .footer {
     padding-left: 0;
     padding-right: 0;
   }
-  
+
   .header {
     margin-bottom: 30px;
   }
 
-  .player{
+  .player {
     max-width: 100%;
     border-left: 0;
     border-right: 0;
     width: 100%;
     border-radius: 0;
     text-align: center;
+  }
+  .player a{
+    padding: ;
+  }
+}
   }
 }

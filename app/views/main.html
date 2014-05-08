@@ -22,7 +22,7 @@
   <tbody>
     <tr ng-class="{playing: nowPlaying == track}" ng-repeat="track in tracks | filter:search" ng-dblclick="setTrack(track)" >
       <td>
-        <span ng-show="nowPlaying == track" class="glyphicon glyphicon-play"></span>
+        <span ng-show="nowPlaying == track" class="fa fa-play"></span>
       </td>
       <td class="title">
         {{track.title}}
@@ -49,5 +49,5 @@
 </main>
 
 <footer class="footer">
-  <p><span class="glyphicon glyphicon-heart"></span> from the Protify team</p>
+  <p><span class="fa fa-heart"></span> from the Protify team</p>
 </footer>

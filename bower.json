@@ -6,9 +6,10 @@
     "json3": "~3.2.6",
     "es5-shim": "~2.1.0",
     "jquery": "~1.11.0",
-    "bootstrap": "~3.0.3",
     "angular-resource": "1.2.15",
-    "angular-ui-router": "~0.2.10"
+    "angular-ui-router": "~0.2.10",
+    "normalize-css": "~3.0.1",
+    "components-font-awesome": "~4.0.3"
   },
   "devDependencies": {
     "angular-mocks": "1.2.15",
