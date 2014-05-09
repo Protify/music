@@ -2,12 +2,12 @@
 
 var app = angular.module('protifyApp');
 
-app.directive('player', function () {
+app.directive('bandinfo', function () {
 
   return {
     restrict: 'E',
-    controller: 'PlayerCtrl',
-    templateUrl: 'views/player.html',
+    controller: 'MainCtrl',
+    templateUrl: 'views/bandinfo.html',
     replace: true
   };
 });

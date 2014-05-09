@@ -2,12 +2,12 @@
 
 var app = angular.module('protifyApp');
 
-app.directive('player', function () {
+app.directive('playlist', function () {
 
   return {
     restrict: 'E',
     controller: 'PlayerCtrl',
-    templateUrl: 'views/player.html',
+    templateUrl: 'views/playlist.html',
     replace: true
   };
 });

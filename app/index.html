@@ -5,9 +5,11 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
     <!--
-    <base href="http://www.loezi.fi/protify/">
-    -->
+    <base href="/protify/">
     <base href="http://127.0.0.1:9000">
+    -->
+    <base href="/protify/">
+    
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
@@ -22,6 +24,7 @@
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link href='http://fonts.googleapis.com/css?family=Knewave|Source+Sans+Pro:200,400,700' rel='stylesheet' type='text/css'>
 
   </head>
   <body ng-app="protifyApp">
@@ -63,9 +66,12 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/router.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/player.js"></script>
         <script src="scripts/directives/player.js"></script>
+        <script src="scripts/directives/playlist.js"></script>
+        <script src="scripts/directives/bandinfo.js"></script>
         <script src="scripts/factories/audio.js"></script>
-        <script src="scripts/factories/track.js"></script>
+        <script src="scripts/factories/content.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -12,8 +12,18 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     templateUrl: 'views/main.html',
     controller: 'MainCtrl'
   })
-  .state('song', {
-    url: '/song/:id',
+  .state('track', {
+    url: '/track/:trackId',
+    templateUrl: 'views/main.html',
+    controller: 'MainCtrl'
+  })
+  .state('band', {
+    url: '/band/:bandId',
+    templateUrl: 'views/main.html',
+    controller: 'MainCtrl'
+  })
+  .state('bandTrack', {
+    url: '/band/:bandId/track/:trackId',
     templateUrl: 'views/main.html',
     controller: 'MainCtrl'
   });

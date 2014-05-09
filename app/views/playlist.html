@@ -1,0 +1,41 @@
+<section class="playlist">
+  <form class="search">
+    <input placeholder="Search" type="search" ng-model="search"></input>
+  </form>
+
+  <table class="playlist">
+    <thead>
+      <th></th>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Album</th>
+      <th>Length</th>
+    </thead>
+    <tbody>
+      <tr ng-class="{playing: nowPlaying == track}" ng-repeat="track in tracks | filter:search" ng-dblclick="setTrack(track)" >
+        <td>
+          <span ng-show="nowPlaying == track" class="fa fa-play"></span>
+        </td>
+        <td class="title">
+          <a ng-href="{{band ? 'band/'+track.artistId+'/track/'+track.id : 'track/'+track.id}}">{{track.title}}
+        </td>
+        <td class="artist" ng-click="clickArtist(track.artist)">
+          <a ng-href="band/{{track.artistId}}">{{track.artist}}</a>
+        </td>
+        <td class="album" ng-click="clickAlbum(track.album)">
+          {{track.album}}
+        </td>
+        <td class="length">
+          {{track.length}}
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <th></th>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Album</th>
+      <th>Length</th>
+    </tfoot>
+  </table>
+</section>

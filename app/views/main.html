@@ -1,51 +1,15 @@
 <main>
-<header>
-  <player></player>
+  <header>
+    <player></player>
 
-  <h1>Protify</h1>
-  <h2>Music As A Service</h2>
-  <h3>For the web 3.0 generation</h3>
-</header>
+    <h1><a href="/player"> Protify</a></h1>
+    <h2>Music As A Service</h2>
+    <h3>For the web 3.0 generation</h3>
+  </header>
 
-<form class="search">
-  <input placeholder="Search" type="search" ng-model="search"></input>
-</form>
+  <bandinfo></bandinfo>
 
-<table class="playlist">
-  <thead>
-    <th></th>
-    <th>Title</th>
-    <th>Artist</th>
-    <th>Album</th>
-    <th>Length</th>
-  </thead>
-  <tbody>
-    <tr ng-class="{playing: nowPlaying == track}" ng-repeat="track in tracks | filter:search" ng-dblclick="setTrack(track)" >
-      <td>
-        <span ng-show="nowPlaying == track" class="fa fa-play"></span>
-      </td>
-      <td class="title">
-        {{track.title}}
-      </td>
-      <td class="artist" ng-click="clickArtist(track.artist)">
-        {{track.artist}}
-      </td>
-      <td class="album" ng-click="clickAlbum(track.album)">
-        {{track.album}}
-      </td>
-      <td class="length">
-        {{track.length}}
-      </td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <th></th>
-    <th>Title</th>
-    <th>Artist</th>
-    <th>Album</th>
-    <th>Length</th>
-  </tfoot>
-</table>
+  <playlist></playlist>
 </main>
 
 <footer class="footer">

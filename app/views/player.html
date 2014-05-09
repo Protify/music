@@ -1,7 +1,7 @@
 <div class="player">
   <div class="nowPlaying">
     <span class="artist" ng-click="clickArtist(nowPlaying.artist)">
-      {{nowPlaying.artist}}
+      <a ng-href="band/{{track.artistId}}">{{nowPlaying.artist}}</a>
     </span>
     <span class="album" ng-click="clickAlbum(nowPlaying.album)">
       {{nowPlaying.album | ifEmpty:'Unknown'}}
