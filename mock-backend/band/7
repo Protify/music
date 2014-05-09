@@ -1,0 +1,18 @@
+{
+  "band":
+    {
+      "name": "bela.bar",
+
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget orci ut odio mattis mattis nec a ipsum. Nulla pretium mi lacus, vitae lobortis ipsum mollis eu. Integer ultricies adipiscing nulla at fringilla. Curabitur vel bibendum risus, quis aliquet nunc. Cras ac elementum justo, nec blandit nisl. Ut vitae facilisis neque. Vestibulum dignissim pretium facilisis.",
+      
+      "biography": "Fusce augue metus, hendrerit id dictum id, fringilla a neque. Nulla quis augue nunc. Proin scelerisque sapien eget orci laoreet gravida nec quis massa. Donec et sem varius, iaculis dolor et, ultricies sapien. Vestibulum congue est ac arcu lobortis facilisis. Ut imperdiet erat purus, at accumsan quam venenatis eu. Ut fringilla convallis nibh sed elementum. Pellentesque blandit ipsum ut porttitor pulvinar. Fusce malesuada ante nulla, eu suscipit ligula suscipit eget. Sed felis nulla, ultrices ac posuere sodales, convallis nec sem. Nam vitae nisi laoreet, tincidunt dui quis, iaculis nunc. Nam sapien dolor, mollis sed interdum et, bibendum vehicula diam. Aliquam at nisl at leo semper accumsan. Duis sed egestas diam. Fusce sagittis dolor vel nisl placerat consectetur."
+    },
+  "tracks":[{
+    "id":8,
+    "artist":"bela.bar",
+    "artistId": 7,
+    "album":"quarkestra",
+    "title":"Orient6",
+    "file":"http://lallinuo.users.cs.helsinki.fi/songs/belabar_Orient6-320.mp3"
+  }]
+}

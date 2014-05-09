@@ -1,0 +1,71 @@
+[{
+  "id":1,
+  "artist":"Akcija",
+  "artistId":1,
+  "album":"",
+  "title":"Plunge 1 (Akcija remix)",
+  "file":"http://lallinuo.users.cs.helsinki.fi/songs/Akcija_Trip-To-Your-Liver-320.mp3"
+},{
+  "id":2,
+  "artist":"Akcija",
+  "artistId":1,
+  "album":"",
+  "title":"The Citys Grey Pavemenets",
+  "file":"http://lallinuo.users.cs.helsinki.fi/songs/Akcija_dve---Plunge-1-Akcija-remix-320.mp3"
+},{
+  "id":3,
+  "artist":"Canton",
+  "artistId":2,
+  "album":"Canton Becker",
+  "title":"Snow Break",
+  "file":"http://lallinuo.users.cs.helsinki.fi/songs/Canton_Snow-Break-320.mp3"
+},{
+  "id":4,
+  "artist":"Mr Rogers",
+  "artistId":3,
+  "album":"Doramey",
+  "title":"Orgasmo",
+  "file":"http://lallinuo.users.cs.helsinki.fi/songs/Mr-Rogers_ORGASMO-feat-Kirstin-320.mp3"
+},{
+  "id":5,
+  "artist":"Rapture of the Deep",
+  "artistId":4,
+  "album":"Underwearbare",
+  "title":"Amberant",
+  "file":"http://lallinuo.users.cs.helsinki.fi/songs/RaptureOfTheDeep_Amberant-320.mp3"
+},{
+  "id":6,
+  "artist":"Slyde",
+  "artistId":5,
+  "album":"Audioplasty",
+  "title":"Sumthang",
+  "file":"http://lallinuo.users.cs.helsinki.fi/songs/Slyde_Sumthang-320.mp3"
+},{
+  "id":7,
+  "artist":"acklabs",
+  "artistId":6,
+  "album":"Acklabs",
+  "title":"Mindless priapism BassReq1",
+  "file":"http://lallinuo.users.cs.helsinki.fi/songs/acklabs_Mindless-priapism-BassReq1-320.mp3"
+},{
+  "id":8,
+  "artist":"bela.bar",
+  "artistId":7,
+  "album":"quarkestra",
+  "title":"Orient6",
+  "file":"http://lallinuo.users.cs.helsinki.fi/songs/belabar_Orient6-320.mp3"
+},{
+  "id":9,
+  "artist":"Pikachu",
+  "artistId":8,
+  "album":"Braunsaur",
+  "title":"pikachu",
+  "file":"http://lallinuo.users.cs.helsinki.fi/songs/brandon_pikachu-320.mp3"
+},{
+  "id":10,
+  "artist":"Nothing",
+  "artistId":9,
+  "album":"Emptiness",
+  "title":"jtwheels38",
+  "file":"http://lallinuo.users.cs.helsinki.fi/songs/jtwheels38_Nothing-320.mp3"
+}]
