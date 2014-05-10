@@ -1,5 +1,5 @@
 #Protify
-=====
+
 [Protify](http://loezi.fi/protify) on MAAAS (Music almost as a service) -sivusto, jolta käyttäjät voivat kuunnella musiikkia selaimellaan.
 
 Protifyn käyttöliittymä on yksinkertainen ja sopii siten myös mobiililaitteilla käytettäväksi.
